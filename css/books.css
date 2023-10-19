@@ -1,0 +1,46 @@
+/* Book cards */
+
+#publications > article > img {
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+.title, .subtitle {
+    font-weight: bold;
+}
+.title {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.subtitle, .year {
+    display: inline-block;
+}
+.year:before {
+    content: '(';
+}
+.year:after {
+    content: ')';
+}
+
+/* mobile */
+
+@media (min-width: 480px) {
+    #publications > article > img {
+        float:right;
+        margin-left: 1rem;
+    }
+    #publications > article {
+        clear: both;
+        overflow: auto;
+    }
+    #publications > article:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+/* tablet */
+@media (min-width: 1024px) {
+    #publications > article, #publications > article:last-of-type {
+        padding: 1rem 1rem 0 1rem;
+        margin-bottom: 1rem;
+    }
+}

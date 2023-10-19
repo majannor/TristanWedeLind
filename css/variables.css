@@ -1,0 +1,18 @@
+:root {
+    /* main */
+    --colorBgMain: rgb(253, 250, 241);
+    --fontMain: Arial, Helvetica, sans-serif;
+    
+    /* header */
+    --colorBgHeader: rgb(41, 43, 87);
+    --colorTxtHeader: rgb(215,194,132);
+
+    /* nav */
+    --colorNav: rgb(79,98,131);
+
+    /* buttoncolor */
+    --colorButton: rgb(88,38,39);
+
+    /* Quote */
+    --colorBgSecondary: rgb(80, 98, 131);
+}

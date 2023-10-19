@@ -1,0 +1,159 @@
+@import 'styles.css';
+
+/* header */
+.wrapper {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    
+    #avatar {
+        justify-self: start;
+        border-radius: 20rem;
+    }
+
+    #headline {
+        justify-self: center;
+        align-self: center;
+        white-space: nowrap;
+    }
+
+    #languageDropdown {
+        justify-self: end;
+        align-self: center;
+        display: block;
+        margin-top: 10px;
+        border-radius: 1rem;
+    }
+}
+
+nav ul {
+    display: flex;  
+    background-color: var(--colorNav);
+    color: var(--colorBgMain);
+    justify-content: space-around;
+    flex-direction: row;
+    line-height: 2rem;
+}
+
+nav ul li {
+    display: block;
+}
+
+/* main */
+section div.column {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--colorTxtHeader);
+    padding: 1rem;
+}
+
+button.btnMain {
+    border-radius: 1rem;
+    padding: 1rem 8rem;
+    margin-bottom: 1rem;
+    background-color: var(--colorButton);
+    color: var(--colorBgMain);
+    border: none;
+}
+
+div.info {
+    flex-grow: 1;
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        #avatar { 
+            display: none !important;
+        }
+
+        #languageDropdown {
+            display: inline-block;
+            justify-self: start;
+        }
+    }
+    
+    nav ul {
+        flex-direction: column; 
+        padding: 0; 
+    }
+    
+    nav ul li {
+        display: block;
+        margin-bottom: 10px; 
+        align-self: center;
+    }
+
+    section div.column {
+        flex-direction: column; 
+    }
+    
+    div.img {
+        display: block;
+        align-self: center;
+    }
+}
+
+/* home */
+article#home {
+    padding: 1rem;
+}
+
+#bioHome {
+    font-size: large;
+}
+
+/* quote */
+blockquote {
+    text-align: center;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem 1rem;
+    color: var(--colorBgMain);
+    background-color: var(--colorBgSecondary);
+}
+
+#source {
+    text-align: right;
+    margin-bottom: 0.25rem;
+}
+
+/* Books aside */
+#home aside {
+    display: none;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    #home {
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+   
+    #home > aside {
+        display: block;
+        grid-column: 5 / 6;
+    }
+    #home > aside > div:last-of-type {
+        display: none;
+    }
+    #home > aside span {
+        display: block;
+    }
+}
+
+@media (min-width: 900px) {
+    #home > aside {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #home > aside > div:last-of-type {
+        display: block;
+    }
+}
+
+
